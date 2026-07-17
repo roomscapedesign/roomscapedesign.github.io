@@ -58,42 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   */
 
-  /* ---- 表单提交 ---- */
+  /* ---- 表单提交：微信引导为主 ---- */
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
-      /* Netlify 表单会自动处理，这里只是给用户反馈 */
-      var submitBtn = contactForm.querySelector('button[type="submit"]');
-      var originalText = submitBtn.textContent;
-      submitBtn.textContent = "正在提交...";
-      submitBtn.disabled = true;
-
-      /* 模拟提交（实际部署关联 Netlify Forms 后无需此段） */
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(contactForm)).toString(),
-      })
-        .then(function () {
-          submitBtn.textContent = "已提交，我们会尽快联系你";
-          submitBtn.style.background = "#4a9e5c";
-          submitBtn.style.borderColor = "#4a9e5c";
-          contactForm.reset();
-        })
-        .catch(function () {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        })
-        .finally(function () {
-          setTimeout(function () {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.background = "";
-            submitBtn.style.borderColor = "";
-          }, 3000);
-        });
+      /* 隐藏表单，展示微信联系方式（客户留资以微信沟通为主） */
+      contactForm.style.display = "none";
+      var success = document.getElementById("contact-success");
+      if (success) success.hidden = false;
     });
   }
 });
