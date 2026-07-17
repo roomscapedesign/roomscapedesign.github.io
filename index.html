@@ -187,27 +187,6 @@
           <article class="service-card">
             <div class="service-card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect x="4" y="20" width="40" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 20V12a8 8 0 0 1 16 0v8" stroke="currentColor" stroke-width="2"/>
-                <path d="M20 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">新房装修</h3>
-            <p class="service-card__desc">
-              毛坯房到精装交付的完整方案。从量房、设计到施工落地，全程把控。适合刚拿到钥匙、想一次性做好的业主。
-            </p>
-            <ul class="service-card__features">
-              <li>量房 + 平面规划</li>
-              <li>3D效果图 + 施工图</li>
-              <li>主材辅材代采，不赚差价</li>
-              <li>施工全程监工，按节点验收</li>
-            </ul>
-            <span class="service-card__tag">工期 60-90 天</span>
-          </article>
-
-          <article class="service-card service-card--featured">
-            <div class="service-card__icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
                 <rect x="4" y="6" width="40" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
                 <path d="M4 22h40" stroke="currentColor" stroke-width="2"/>
                 <path d="M20 22v20" stroke="currentColor" stroke-width="2"/>
@@ -225,6 +204,27 @@
               <li>结构安全评估，该加固就加固</li>
             </ul>
             <span class="service-card__tag">工期 75-120 天</span>
+          </article>
+
+          <article class="service-card service-card--featured">
+            <div class="service-card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <rect x="4" y="20" width="40" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 20V12a8 8 0 0 1 16 0v8" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">新房装修</h3>
+            <p class="service-card__desc">
+              毛坯房到精装交付的完整方案。从量房、设计到施工落地，全程把控。适合刚拿到钥匙、想一次性做好的业主。
+            </p>
+            <ul class="service-card__features">
+              <li>量房 + 平面规划</li>
+              <li>3D效果图 + 施工图</li>
+              <li>主材辅材代采，不赚差价</li>
+              <li>施工全程监工，按节点验收</li>
+            </ul>
+            <span class="service-card__tag">工期 60-90 天</span>
           </article>
 
           <article class="service-card">
@@ -264,7 +264,8 @@
         </div>
         <div class="cases__grid">
           <div class="case-card">
-            <div class="case-card__img case-card__img--1">
+            <div class="case-card__media case-card__media--1">
+              <img class="case-card__img" src="images/case1.jpg" alt="洛龙区建业桂园120m² 现代简约风格新房装修完工实拍" loading="lazy">
               <span class="case-card__area">现代简约</span>
             </div>
             <div class="case-card__info">
@@ -275,7 +276,8 @@
           </div>
 
           <div class="case-card">
-            <div class="case-card__img case-card__img--2">
+            <div class="case-card__media case-card__media--2">
+              <img class="case-card__img" src="images/case2.jpg" alt="涧西区老小区90m² 原木风老房整体改造完工实拍" loading="lazy">
               <span class="case-card__area">原木风</span>
             </div>
             <div class="case-card__info">
@@ -286,7 +288,8 @@
           </div>
 
           <div class="case-card">
-            <div class="case-card__img case-card__img--3">
+            <div class="case-card__media case-card__media--3">
+              <img class="case-card__img" src="images/case3.jpg" alt="西工区大平层160m² 轻法式纯设计项目完工实拍" loading="lazy">
               <span class="case-card__area">轻法式</span>
             </div>
             <div class="case-card__info">
@@ -298,7 +301,7 @@
         </div>
 
         <div class="cases__more">
-          <p>更多案例在小红书 <strong>@刘设计/如沐空间</strong> 持续更新中，完工实拍，不是效果图。</p>
+          <p>更多案例在小红书 <strong>@洛阳如沐空间</strong> 持续更新中，完工实拍，不是效果图。</p>
         </div>
       </div>
     </section>
@@ -482,7 +485,7 @@
             <div class="contact__channels">
               <div class="contact__channel">
                 <div class="contact__channel-label">小红书</div>
-                <div class="contact__channel-value">@刘设计/如沐空间</div>
+                <div class="contact__channel-value">@洛阳如沐空间</div>
                 <span class="contact__channel-note">关注看案例实拍</span>
               </div>
               <div class="contact__channel">
@@ -503,7 +506,7 @@
             </div>
           </div>
           <div class="contact__form-wrapper">
-            <form class="contact__form" id="contact-form" netlify name="contact" method="POST" data-netlify="true">
+            <form class="contact__form" id="contact-form" method="POST">
               <input type="hidden" name="form-name" value="contact">
               <div class="form__group">
                 <label for="name" class="form__label">称呼</label>
@@ -531,9 +534,17 @@
                 <label for="message" class="form__label">想说的话</label>
                 <textarea id="message" name="message" class="form__input form__textarea" rows="3" placeholder="说说你的想法、预算、风格偏好..."></textarea>
               </div>
-              <button type="submit" class="btn btn--primary btn--block">提交咨询</button>
-              <p class="form__note">提交后我们会在24小时内联系你。信息仅用于沟通，不会外泄。</p>
+              <button type="submit" class="btn btn--primary btn--block">提交并获取联系方式</button>
+              <p class="form__note">提交后直接展示微信，方便你随时联系我们。</p>
             </form>
+            <div class="contact__success" id="contact-success" hidden>
+              <div class="contact__success-icon">✓</div>
+              <h3>已收到，请加微信沟通</h3>
+              <p>为避免漏接消息，直接加微信更快响应，备注「装修咨询」：</p>
+              <p class="contact__wechat-id">微信号：rumu-space</p>
+              <img class="contact__qr" src="images/wechat-qr.svg" alt="微信二维码">
+              <p class="form__note">把上方二维码截图保存，或用微信搜索上面微信号添加。</p>
+            </div>
           </div>
         </div>
       </div>
@@ -562,7 +573,7 @@
       </div>
       <div class="footer__links">
         <h4>关注我们</h4>
-        <p>小红书：@刘设计/如沐空间</p>
+        <p>小红书：@洛阳如沐空间</p>
       </div>
     </div>
     <div class="footer__bottom container">
