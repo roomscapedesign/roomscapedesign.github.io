@@ -463,24 +463,31 @@ a {
   box-shadow: var(--shadow-lg);
 }
 
-.case-card__img {
+.case-card__media {
+  position: relative;
   height: 220px;
   display: flex;
   align-items: flex-end;
   padding: 20px;
-  position: relative;
-}
-
-.case-card__img--1 {
+  overflow: hidden;
   background: linear-gradient(135deg, #d4c9b8 0%, #b8a88a 100%);
 }
 
-.case-card__img--2 {
+.case-card__media--2 {
   background: linear-gradient(135deg, #c8bfb0 0%, #a89880 100%);
 }
 
-.case-card__img--3 {
+.case-card__media--3 {
   background: linear-gradient(135deg, #d9cfc4 0%, #c4b49e 100%);
+}
+
+.case-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .case-card__area {
@@ -797,6 +804,60 @@ select.form__input option {
   color: rgba(250, 250, 248, 0.4);
   text-align: center;
   margin-top: 12px;
+}
+
+/* ===== Contact success (微信引导) ===== */
+.contact__success {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+  text-align: center;
+}
+
+.contact__success[hidden] {
+  display: none;
+}
+
+.contact__success-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #4a9e5c;
+  color: #fff;
+  font-size: 28px;
+  line-height: 56px;
+  text-align: center;
+}
+
+.contact__success h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact__success p {
+  font-size: 14px;
+  color: rgba(250, 250, 248, 0.7);
+  margin-bottom: 8px;
+}
+
+.contact__wechat-id {
+  font-size: 22px !important;
+  font-weight: 700;
+  color: var(--color-accent) !important;
+  letter-spacing: 0.04em;
+  margin: 12px 0 !important;
+}
+
+.contact__qr {
+  width: 160px;
+  height: 160px;
+  margin: 8px auto 16px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  object-fit: contain;
 }
 
 /* ===== Footer ===== */
